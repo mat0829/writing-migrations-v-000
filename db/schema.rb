@@ -10,6 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 1) do
+ActiveRecord::Schema.define(version: 2) do
+
+  create_table "artists", force: :cascade do |t|
+    t.text "name"
+    t.text "genre"
+    t.integer "age"
+    t.text "hometown"
+  end
+
+  create_table "students", force: :cascade do |t|
+    t.text "name"
+    t.integer "grade"
+    t.string "birthdate"
+  end
 
 end
